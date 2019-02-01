@@ -9,10 +9,14 @@ class Timer extends Component {
 
   // add your code here
 
+  componentWillUnmount(){
+    console.log("will unmount")
+  }
 
-
-
-
+  componentDidMount(){
+    console.log("did mount")
+    setInterval(this.clockTick, 1000)
+  }
 
 
   render() {
@@ -44,6 +48,7 @@ class Timer extends Component {
   // for the 'x' button,
   handleClose = () => {
     this.props.removeTimer(this.props.id)
+    this.componentWillUnmount()
   }
 
 
