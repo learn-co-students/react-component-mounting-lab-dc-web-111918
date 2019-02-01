@@ -9,21 +9,18 @@ class App extends Component {
     timerIDs: []
   }
 
+  componentDidMount(){
+    console.log("did mount")
+    this.handleAddTimer()
+  }
 
   //Your code here:
-
-
-
-
-
-
 
 
 
   // No need to modify anything in render or the class methods below
   // Unless, of course, you're curious about how it all works
   render() {
-
     return (
       <div className="App">
         <h1>MultiTimer</h1>
